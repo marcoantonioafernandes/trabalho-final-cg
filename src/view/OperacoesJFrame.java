@@ -12,12 +12,10 @@ import controller.Display;
  * @author marco
  */
 public class OperacoesJFrame extends javax.swing.JFrame {
-    Display display;
     /**
      * Creates new form OperacoesJFrame
      */
     public OperacoesJFrame() {
-        this.display = new Display();
         initComponents();
     }
 
@@ -30,38 +28,44 @@ public class OperacoesJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        resultjPanel = display.panel();
         OperacoesjTabbedPane = new javax.swing.JTabbedPane();
         eq1GraujPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         coeficienteAngular = new javax.swing.JTextField();
         coeficienteLinear = new javax.swing.JTextField();
-        submitEq1Grau = new javax.swing.JButton();
+        submitFuncao1Grau = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         eq1GraujPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        coeficienteAngular1 = new javax.swing.JTextField();
-        coeficienteLinear1 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        coeficienteA = new javax.swing.JTextField();
+        coeficienteB = new javax.swing.JTextField();
+        submitFuncao2Grau = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        coeficienteLinear2 = new javax.swing.JTextField();
+        coeficienteC = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        eq1GraujPanel3 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        multiplicadorMSeno = new javax.swing.JTextField();
+        submitFuncaoSeno = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        termoIndependenteSeno = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        eq1GraujPanel4 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        multiplicadorMCosseno = new javax.swing.JTextField();
+        submitFuncaoCosseno = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        termoIndependenteCosseno = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        resultjPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout resultjPanelLayout = new javax.swing.GroupLayout(resultjPanel);
-        resultjPanel.setLayout(resultjPanelLayout);
-        resultjPanelLayout.setHorizontalGroup(
-            resultjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 623, Short.MAX_VALUE)
-        );
-        resultjPanelLayout.setVerticalGroup(
-            resultjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
 
         jLabel1.setText("Coeficiente Angular");
 
@@ -79,77 +83,85 @@ public class OperacoesJFrame extends javax.swing.JFrame {
             }
         });
 
-        submitEq1Grau.setText("Exibir gráfico");
-        submitEq1Grau.addActionListener(new java.awt.event.ActionListener() {
+        submitFuncao1Grau.setText("Exibir gráfico");
+        submitFuncao1Grau.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitEq1GrauActionPerformed(evt);
+                submitFuncao1GrauActionPerformed(evt);
             }
         });
+
+        jLabel9.setText("y(x) = ax + b");
 
         javax.swing.GroupLayout eq1GraujPanel1Layout = new javax.swing.GroupLayout(eq1GraujPanel1);
         eq1GraujPanel1.setLayout(eq1GraujPanel1Layout);
         eq1GraujPanel1Layout.setHorizontalGroup(
             eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(eq1GraujPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eq1GraujPanel1Layout.createSequentialGroup()
+                .addContainerGap(80, Short.MAX_VALUE)
                 .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(submitEq1Grau)
+                    .addComponent(submitFuncao1Grau)
                     .addGroup(eq1GraujPanel1Layout.createSequentialGroup()
-                        .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2))
-                        .addGap(18, 18, 18)
-                        .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(coeficienteLinear, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
-                            .addComponent(coeficienteAngular))))
-                .addContainerGap(73, Short.MAX_VALUE))
+                        .addGap(30, 30, 30)
+                        .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(coeficienteLinear, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(coeficienteAngular, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(134, 134, 134))
+            .addGroup(eq1GraujPanel1Layout.createSequentialGroup()
+                .addGap(259, 259, 259)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         eq1GraujPanel1Layout.setVerticalGroup(
             eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(eq1GraujPanel1Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(coeficienteAngular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(coeficienteLinear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(submitEq1Grau)
-                .addContainerGap(304, Short.MAX_VALUE))
+                .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(coeficienteAngular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(14, 14, 14)
+                .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(coeficienteLinear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(29, 29, 29)
+                .addComponent(submitFuncao1Grau)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
-        OperacoesjTabbedPane.addTab("Equação de 1º grau", eq1GraujPanel1);
+        OperacoesjTabbedPane.addTab("Funcao de 1º grau", eq1GraujPanel1);
 
         jLabel3.setText("Coeficiente Principal (a)");
 
         jLabel4.setText("Coeficiente Secundário (b)");
 
-        coeficienteAngular1.addActionListener(new java.awt.event.ActionListener() {
+        coeficienteA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                coeficienteAngular1ActionPerformed(evt);
+                coeficienteAActionPerformed(evt);
             }
         });
 
-        coeficienteLinear1.addActionListener(new java.awt.event.ActionListener() {
+        coeficienteB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                coeficienteLinear1ActionPerformed(evt);
+                coeficienteBActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Exibir gráfico");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        submitFuncao2Grau.setText("Exibir gráfico");
+        submitFuncao2Grau.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                submitFuncao2GrauActionPerformed(evt);
             }
         });
 
         jLabel5.setText("Termo Independente (c)");
 
-        coeficienteLinear2.addActionListener(new java.awt.event.ActionListener() {
+        coeficienteC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                coeficienteLinear2ActionPerformed(evt);
+                coeficienteCActionPerformed(evt);
             }
         });
 
@@ -165,13 +177,13 @@ public class OperacoesJFrame extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addGroup(eq1GraujPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(coeficienteAngular1, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
-                    .addComponent(coeficienteLinear1)
-                    .addComponent(coeficienteLinear2))
+                    .addComponent(coeficienteA, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                    .addComponent(coeficienteB)
+                    .addComponent(coeficienteC))
                 .addContainerGap(34, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eq1GraujPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(submitFuncao2Grau)
                 .addGap(27, 27, 27))
         );
         eq1GraujPanel2Layout.setVerticalGroup(
@@ -180,67 +192,318 @@ public class OperacoesJFrame extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addGroup(eq1GraujPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(coeficienteAngular1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(coeficienteA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(eq1GraujPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(coeficienteLinear1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(coeficienteB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(eq1GraujPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(coeficienteLinear2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(coeficienteC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addContainerGap(254, Short.MAX_VALUE))
+                .addComponent(submitFuncao2Grau)
+                .addContainerGap(43, Short.MAX_VALUE))
         );
+
+        jLabel10.setText("y(x) = ax + bx + c");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 511, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(254, 254, 254)
+                .addComponent(jLabel10)
+                .addContainerGap(259, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(0, 3, Short.MAX_VALUE)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addContainerGap(74, Short.MAX_VALUE)
                     .addComponent(eq1GraujPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 3, Short.MAX_VALUE)))
+                    .addContainerGap(73, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 480, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel10)
+                .addContainerGap(250, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(eq1GraujPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        OperacoesjTabbedPane.addTab("Funcao de 2º grau", jPanel2);
+
+        jLabel6.setText("Multiplicador da função (m)");
+
+        multiplicadorMSeno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplicadorMSenoActionPerformed(evt);
+            }
+        });
+
+        submitFuncaoSeno.setText("Exibir gráfico");
+        submitFuncaoSeno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitFuncaoSenoActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("termo independente (b)");
+
+        termoIndependenteSeno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                termoIndependenteSenoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout eq1GraujPanel3Layout = new javax.swing.GroupLayout(eq1GraujPanel3);
+        eq1GraujPanel3.setLayout(eq1GraujPanel3Layout);
+        eq1GraujPanel3Layout.setHorizontalGroup(
+            eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(eq1GraujPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel8))
+                .addGap(18, 18, 18)
+                .addGroup(eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(multiplicadorMSeno, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                    .addComponent(termoIndependenteSeno))
+                .addContainerGap(34, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eq1GraujPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(submitFuncaoSeno)
+                .addGap(27, 27, 27))
+        );
+        eq1GraujPanel3Layout.setVerticalGroup(
+            eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(eq1GraujPanel3Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addGroup(eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(multiplicadorMSeno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(termoIndependenteSeno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addGap(32, 32, 32)
+                .addComponent(submitFuncaoSeno)
+                .addContainerGap(51, Short.MAX_VALUE))
+        );
+
+        jLabel11.setText("y(x) = m seno(tx) + b");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(255, Short.MAX_VALUE)
+                .addComponent(jLabel11)
+                .addGap(233, 233, 233))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                    .addContainerGap(73, Short.MAX_VALUE)
+                    .addComponent(eq1GraujPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(74, Short.MAX_VALUE)))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel11)
+                .addContainerGap(447, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(eq1GraujPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(213, Short.MAX_VALUE)))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 659, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 492, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        OperacoesjTabbedPane.addTab("Equação de 2º grau", jPanel2);
+        OperacoesjTabbedPane.addTab("Função Seno", jPanel1);
+
+        jLabel7.setText("Multiplicador da função (m)");
+
+        multiplicadorMCosseno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplicadorMCossenoActionPerformed(evt);
+            }
+        });
+
+        submitFuncaoCosseno.setText("Exibir gráfico");
+        submitFuncaoCosseno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitFuncaoCossenoActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setText("termo independente (b)");
+
+        termoIndependenteCosseno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                termoIndependenteCossenoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout eq1GraujPanel4Layout = new javax.swing.GroupLayout(eq1GraujPanel4);
+        eq1GraujPanel4.setLayout(eq1GraujPanel4Layout);
+        eq1GraujPanel4Layout.setHorizontalGroup(
+            eq1GraujPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(eq1GraujPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(eq1GraujPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel12))
+                .addGap(18, 18, 18)
+                .addGroup(eq1GraujPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(multiplicadorMCosseno, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                    .addComponent(termoIndependenteCosseno))
+                .addContainerGap(34, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eq1GraujPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(submitFuncaoCosseno)
+                .addGap(27, 27, 27))
+        );
+        eq1GraujPanel4Layout.setVerticalGroup(
+            eq1GraujPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(eq1GraujPanel4Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addGroup(eq1GraujPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(multiplicadorMCosseno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(eq1GraujPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(termoIndependenteCosseno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
+                .addGap(32, 32, 32)
+                .addComponent(submitFuncaoCosseno)
+                .addContainerGap(51, Short.MAX_VALUE))
+        );
+
+        jLabel13.setText("y(x) = m cosseno(tx) + b");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(238, Short.MAX_VALUE)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(208, 208, 208))
+            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                    .addContainerGap(73, Short.MAX_VALUE)
+                    .addComponent(eq1GraujPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(74, Short.MAX_VALUE)))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel13)
+                .addContainerGap(447, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(eq1GraujPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(213, Short.MAX_VALUE)))
+        );
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 659, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 492, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        OperacoesjTabbedPane.addTab("Cosseno", jPanel4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(resultjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(OperacoesjTabbedPane))
+                .addComponent(OperacoesjTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(resultjPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(OperacoesjTabbedPane, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(OperacoesjTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void submitEq1GrauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitEq1GrauActionPerformed
+    private void coeficienteCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coeficienteCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_coeficienteCActionPerformed
+
+    private void submitFuncao2GrauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitFuncao2GrauActionPerformed
+        double coeficienteAAux = Double.parseDouble(this.coeficienteA.getText());
+        double coeficienteBAux = Double.parseDouble(this.coeficienteB.getText());
+        double coeficienteCAux = Double.parseDouble(this.coeficienteC.getText());
+
+        Display display = new Display();
+        display.setFuncao2grau(coeficienteAAux, coeficienteBAux, coeficienteCAux);
+        display.showDisplay("Função do segundo grau");
+    }//GEN-LAST:event_submitFuncao2GrauActionPerformed
+
+    private void coeficienteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coeficienteBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_coeficienteBActionPerformed
+
+    private void coeficienteAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coeficienteAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_coeficienteAActionPerformed
+
+    private void submitFuncao1GrauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitFuncao1GrauActionPerformed
         // TODO add your handling code here:
         double coeficienteAngularAux = Double.parseDouble(this.coeficienteAngular.getText());
         double coeficienteLinearAux = Double.parseDouble(this.coeficienteLinear.getText());
-        display.setEquacao1Grau(coeficienteAngularAux, coeficienteLinearAux);
-    }//GEN-LAST:event_submitEq1GrauActionPerformed
+
+        Display display = new Display();
+        display.setFuncao1grau(coeficienteAngularAux, coeficienteLinearAux);
+        display.showDisplay("Função do primeiro grau");
+    }//GEN-LAST:event_submitFuncao1GrauActionPerformed
 
     private void coeficienteLinearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coeficienteLinearActionPerformed
         // TODO add your handling code here:
@@ -250,21 +513,39 @@ public class OperacoesJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_coeficienteAngularActionPerformed
 
-    private void coeficienteAngular1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coeficienteAngular1ActionPerformed
+    private void multiplicadorMSenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicadorMSenoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_coeficienteAngular1ActionPerformed
+    }//GEN-LAST:event_multiplicadorMSenoActionPerformed
 
-    private void coeficienteLinear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coeficienteLinear1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_coeficienteLinear1ActionPerformed
+    private void submitFuncaoSenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitFuncaoSenoActionPerformed
+        double multiplicadorMAux = Double.parseDouble(this.multiplicadorMSeno.getText());
+        double termoIndependenteAux = Double.parseDouble(this.termoIndependenteSeno.getText());
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        Display display = new Display();
+        display.setSeno(multiplicadorMAux, termoIndependenteAux);
+        display.showDisplay("Função seno");
+    }//GEN-LAST:event_submitFuncaoSenoActionPerformed
 
-    private void coeficienteLinear2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coeficienteLinear2ActionPerformed
+    private void termoIndependenteSenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_termoIndependenteSenoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_coeficienteLinear2ActionPerformed
+    }//GEN-LAST:event_termoIndependenteSenoActionPerformed
+
+    private void multiplicadorMCossenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicadorMCossenoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_multiplicadorMCossenoActionPerformed
+
+    private void submitFuncaoCossenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitFuncaoCossenoActionPerformed
+        double multiplicadorMAux = Double.parseDouble(this.multiplicadorMCosseno.getText());
+        double termoIndependenteAux = Double.parseDouble(this.termoIndependenteCosseno.getText());
+
+        Display display = new Display();
+        display.setCosseno(multiplicadorMAux, termoIndependenteAux);
+        display.showDisplay("Função cosseno");
+    }//GEN-LAST:event_submitFuncaoCossenoActionPerformed
+
+    private void termoIndependenteCossenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_termoIndependenteCossenoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_termoIndependenteCossenoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -303,21 +584,40 @@ public class OperacoesJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane OperacoesjTabbedPane;
+    private javax.swing.JTextField coeficienteA;
     private javax.swing.JTextField coeficienteAngular;
-    private javax.swing.JTextField coeficienteAngular1;
+    private javax.swing.JTextField coeficienteB;
+    private javax.swing.JTextField coeficienteC;
     private javax.swing.JTextField coeficienteLinear;
-    private javax.swing.JTextField coeficienteLinear1;
-    private javax.swing.JTextField coeficienteLinear2;
     private javax.swing.JPanel eq1GraujPanel1;
     private javax.swing.JPanel eq1GraujPanel2;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JPanel eq1GraujPanel3;
+    private javax.swing.JPanel eq1GraujPanel4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel resultjPanel;
-    private javax.swing.JButton submitEq1Grau;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JTextField multiplicadorMCosseno;
+    private javax.swing.JTextField multiplicadorMSeno;
+    private javax.swing.JButton submitFuncao1Grau;
+    private javax.swing.JButton submitFuncao2Grau;
+    private javax.swing.JButton submitFuncaoCosseno;
+    private javax.swing.JButton submitFuncaoSeno;
+    private javax.swing.JTextField termoIndependenteCosseno;
+    private javax.swing.JTextField termoIndependenteSeno;
     // End of variables declaration//GEN-END:variables
 }
