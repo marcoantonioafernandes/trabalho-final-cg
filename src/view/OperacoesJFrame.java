@@ -17,6 +17,10 @@ public class OperacoesJFrame extends javax.swing.JFrame {
      */
     public OperacoesJFrame() {
         initComponents();
+        this.erroAba1.setVisible(false);
+        this.erroAba2.setVisible(false);
+        this.erroAba3.setVisible(false);
+        this.erroAba4.setVisible(false);
     }
 
     /**
@@ -36,16 +40,18 @@ public class OperacoesJFrame extends javax.swing.JFrame {
         coeficienteLinear = new javax.swing.JTextField();
         submitFuncao1Grau = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
+        erroAba1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         eq1GraujPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         coeficienteA = new javax.swing.JTextField();
         coeficienteB = new javax.swing.JTextField();
-        submitFuncao2Grau = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         coeficienteC = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
+        erroAba2 = new javax.swing.JLabel();
+        submitFuncao2Grau = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         eq1GraujPanel3 = new javax.swing.JPanel();
@@ -55,6 +61,7 @@ public class OperacoesJFrame extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         termoIndependenteSeno = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
+        erroAba3 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         eq1GraujPanel4 = new javax.swing.JPanel();
@@ -64,6 +71,7 @@ public class OperacoesJFrame extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         termoIndependenteCosseno = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
+        erroAba4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,44 +100,52 @@ public class OperacoesJFrame extends javax.swing.JFrame {
 
         jLabel9.setText("y(x) = ax + b");
 
+        erroAba1.setForeground(new java.awt.Color(255, 0, 0));
+        erroAba1.setText("ERRO! Digite apenas números");
+
         javax.swing.GroupLayout eq1GraujPanel1Layout = new javax.swing.GroupLayout(eq1GraujPanel1);
         eq1GraujPanel1.setLayout(eq1GraujPanel1Layout);
         eq1GraujPanel1Layout.setHorizontalGroup(
             eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(eq1GraujPanel1Layout.createSequentialGroup()
+                .addGap(198, 198, 198)
+                .addComponent(erroAba1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eq1GraujPanel1Layout.createSequentialGroup()
-                .addContainerGap(80, Short.MAX_VALUE)
-                .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(submitFuncao1Grau)
-                    .addGroup(eq1GraujPanel1Layout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eq1GraujPanel1Layout.createSequentialGroup()
                         .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2))
-                        .addGap(30, 30, 30)
-                        .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(coeficienteLinear, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(coeficienteAngular, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(134, 134, 134))
-            .addGroup(eq1GraujPanel1Layout.createSequentialGroup()
-                .addGap(259, 259, 259)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(coeficienteAngular, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(coeficienteLinear, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(submitFuncao1Grau))
+                        .addGap(134, 134, 134))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eq1GraujPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(235, 235, 235))))
         );
         eq1GraujPanel1Layout.setVerticalGroup(
             eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(eq1GraujPanel1Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(25, 25, 25)
+                .addComponent(erroAba1)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(coeficienteAngular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
-                .addGap(14, 14, 14)
+                .addGap(26, 26, 26)
                 .addGroup(eq1GraujPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(coeficienteLinear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(29, 29, 29)
+                    .addComponent(jLabel2)
+                    .addComponent(coeficienteLinear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(submitFuncao1Grau)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         OperacoesjTabbedPane.addTab("Funcao de 1º grau", eq1GraujPanel1);
@@ -150,13 +166,6 @@ public class OperacoesJFrame extends javax.swing.JFrame {
             }
         });
 
-        submitFuncao2Grau.setText("Exibir gráfico");
-        submitFuncao2Grau.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitFuncao2GrauActionPerformed(evt);
-            }
-        });
-
         jLabel5.setText("Termo Independente (c)");
 
         coeficienteC.addActionListener(new java.awt.event.ActionListener() {
@@ -172,67 +181,87 @@ public class OperacoesJFrame extends javax.swing.JFrame {
             .addGroup(eq1GraujPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(eq1GraujPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel5)
+                    .addGroup(eq1GraujPanel2Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(eq1GraujPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(eq1GraujPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(coeficienteA, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
                     .addComponent(coeficienteB)
                     .addComponent(coeficienteC))
-                .addContainerGap(34, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eq1GraujPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(submitFuncao2Grau)
-                .addGap(27, 27, 27))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         eq1GraujPanel2Layout.setVerticalGroup(
             eq1GraujPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(eq1GraujPanel2Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addContainerGap(88, Short.MAX_VALUE)
                 .addGroup(eq1GraujPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(coeficienteA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(eq1GraujPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(coeficienteB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(coeficienteA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addGroup(eq1GraujPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(coeficienteC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(submitFuncao2Grau)
-                .addContainerGap(43, Short.MAX_VALUE))
+                    .addComponent(coeficienteB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(15, 15, 15)
+                .addGroup(eq1GraujPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(coeficienteC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(52, 52, 52))
         );
 
         jLabel10.setText("y(x) = ax + bx + c");
+
+        erroAba2.setForeground(new java.awt.Color(255, 0, 0));
+        erroAba2.setText("ERRO! Digite apenas números");
+
+        submitFuncao2Grau.setText("Exibir gráfico");
+        submitFuncao2Grau.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitFuncao2GrauActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(submitFuncao2Grau)
+                .addGap(68, 68, 68))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(254, 254, 254)
-                .addComponent(jLabel10)
-                .addContainerGap(259, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(226, 226, 226)
+                        .addComponent(jLabel10))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(167, 167, 167)
+                        .addComponent(erroAba2)))
+                .addContainerGap(174, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                    .addContainerGap(74, Short.MAX_VALUE)
+                    .addContainerGap(46, Short.MAX_VALUE)
                     .addComponent(eq1GraujPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(73, Short.MAX_VALUE)))
+                    .addContainerGap(45, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(32, 32, 32)
+                .addComponent(erroAba2)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel10)
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
+                .addComponent(submitFuncao2Grau)
+                .addContainerGap())
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap(33, Short.MAX_VALUE)
                     .addComponent(eq1GraujPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addContainerGap(34, Short.MAX_VALUE)))
         );
 
         OperacoesjTabbedPane.addTab("Funcao de 2º grau", jPanel2);
@@ -266,45 +295,52 @@ public class OperacoesJFrame extends javax.swing.JFrame {
             eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(eq1GraujPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel8))
-                .addGap(18, 18, 18)
-                .addGroup(eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(multiplicadorMSeno, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
-                    .addComponent(termoIndependenteSeno))
+                .addGroup(eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(submitFuncaoSeno)
+                    .addGroup(eq1GraujPanel3Layout.createSequentialGroup()
+                        .addGroup(eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel8))
+                        .addGap(18, 18, 18)
+                        .addGroup(eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(multiplicadorMSeno, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                            .addComponent(termoIndependenteSeno))))
                 .addContainerGap(34, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eq1GraujPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(submitFuncaoSeno)
-                .addGap(27, 27, 27))
         );
         eq1GraujPanel3Layout.setVerticalGroup(
             eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(eq1GraujPanel3Layout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addContainerGap(126, Short.MAX_VALUE)
                 .addGroup(eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(multiplicadorMSeno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(eq1GraujPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(termoIndependenteSeno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
-                .addGap(32, 32, 32)
+                .addGap(18, 18, 18)
                 .addComponent(submitFuncaoSeno)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jLabel11.setText("y(x) = m seno(tx) + b");
+
+        erroAba3.setForeground(new java.awt.Color(255, 0, 0));
+        erroAba3.setText("ERRO! Digite apenas números");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(255, Short.MAX_VALUE)
-                .addComponent(jLabel11)
-                .addGap(233, 233, 233))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(215, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addGap(240, 240, 240))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(erroAba3)
+                        .addGap(189, 189, 189))))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                     .addContainerGap(73, Short.MAX_VALUE)
@@ -314,9 +350,11 @@ public class OperacoesJFrame extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(38, 38, 38)
+                .addComponent(erroAba3)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel11)
-                .addContainerGap(447, Short.MAX_VALUE))
+                .addContainerGap(387, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -337,7 +375,7 @@ public class OperacoesJFrame extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 492, Short.MAX_VALUE)
+            .addGap(0, 497, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -375,46 +413,56 @@ public class OperacoesJFrame extends javax.swing.JFrame {
         eq1GraujPanel4Layout.setHorizontalGroup(
             eq1GraujPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(eq1GraujPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(eq1GraujPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel12))
-                .addGap(18, 18, 18)
                 .addGroup(eq1GraujPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(multiplicadorMCosseno, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
-                    .addComponent(termoIndependenteCosseno))
+                    .addGroup(eq1GraujPanel4Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel12)
+                        .addGap(252, 252, 252))
+                    .addGroup(eq1GraujPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(eq1GraujPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(termoIndependenteCosseno, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(submitFuncaoCosseno)
+                            .addGroup(eq1GraujPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(multiplicadorMCosseno, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(34, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eq1GraujPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(submitFuncaoCosseno)
-                .addGap(27, 27, 27))
         );
         eq1GraujPanel4Layout.setVerticalGroup(
             eq1GraujPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(eq1GraujPanel4Layout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addContainerGap(116, Short.MAX_VALUE)
                 .addGroup(eq1GraujPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(multiplicadorMCosseno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(multiplicadorMCosseno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
                 .addGap(18, 18, 18)
                 .addGroup(eq1GraujPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(termoIndependenteCosseno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12))
-                .addGap(32, 32, 32)
+                .addGap(18, 18, 18)
                 .addComponent(submitFuncaoCosseno)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jLabel13.setText("y(x) = m cosseno(tx) + b");
+
+        erroAba4.setForeground(new java.awt.Color(255, 0, 0));
+        erroAba4.setText("ERRO! Digite apenas números");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(238, Short.MAX_VALUE)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(208, 208, 208))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap(205, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(210, 210, 210))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addComponent(erroAba4)
+                        .addGap(199, 199, 199))))
             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                     .addContainerGap(73, Short.MAX_VALUE)
@@ -424,9 +472,11 @@ public class OperacoesJFrame extends javax.swing.JFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(43, 43, 43)
+                .addComponent(erroAba4)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel13)
-                .addContainerGap(447, Short.MAX_VALUE))
+                .addContainerGap(387, Short.MAX_VALUE))
             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -462,12 +512,14 @@ public class OperacoesJFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(OperacoesjTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(OperacoesjTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 604, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(OperacoesjTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(OperacoesjTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -478,13 +530,17 @@ public class OperacoesJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_coeficienteCActionPerformed
 
     private void submitFuncao2GrauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitFuncao2GrauActionPerformed
-        double coeficienteAAux = Double.parseDouble(this.coeficienteA.getText());
-        double coeficienteBAux = Double.parseDouble(this.coeficienteB.getText());
-        double coeficienteCAux = Double.parseDouble(this.coeficienteC.getText());
+        try{
+            double coeficienteAAux = Double.parseDouble(this.coeficienteA.getText());
+            double coeficienteBAux = Double.parseDouble(this.coeficienteB.getText());
+            double coeficienteCAux = Double.parseDouble(this.coeficienteC.getText());
 
-        Display display = new Display();
-        display.setFuncao2grau(coeficienteAAux, coeficienteBAux, coeficienteCAux);
-        display.showDisplay("Função do segundo grau");
+            Display display = new Display();
+            display.setFuncao2grau(coeficienteAAux, coeficienteBAux, coeficienteCAux);
+            display.showDisplay("Função do segundo grau");
+        } catch( NumberFormatException e){
+            this.erroAba2.setVisible(true);
+        }
     }//GEN-LAST:event_submitFuncao2GrauActionPerformed
 
     private void coeficienteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coeficienteBActionPerformed
@@ -497,12 +553,16 @@ public class OperacoesJFrame extends javax.swing.JFrame {
 
     private void submitFuncao1GrauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitFuncao1GrauActionPerformed
         // TODO add your handling code here:
-        double coeficienteAngularAux = Double.parseDouble(this.coeficienteAngular.getText());
-        double coeficienteLinearAux = Double.parseDouble(this.coeficienteLinear.getText());
+        try{
+            double coeficienteAngularAux = Double.parseDouble(this.coeficienteAngular.getText());
+            double coeficienteLinearAux = Double.parseDouble(this.coeficienteLinear.getText());
 
-        Display display = new Display();
-        display.setFuncao1grau(coeficienteAngularAux, coeficienteLinearAux);
-        display.showDisplay("Função do primeiro grau");
+            Display display = new Display();
+            display.setFuncao1grau(coeficienteAngularAux, coeficienteLinearAux);
+            display.showDisplay("Função do primeiro grau");
+        } catch( NumberFormatException e){
+            this.erroAba1.setVisible(true);
+        }
     }//GEN-LAST:event_submitFuncao1GrauActionPerformed
 
     private void coeficienteLinearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coeficienteLinearActionPerformed
@@ -518,12 +578,16 @@ public class OperacoesJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_multiplicadorMSenoActionPerformed
 
     private void submitFuncaoSenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitFuncaoSenoActionPerformed
-        double multiplicadorMAux = Double.parseDouble(this.multiplicadorMSeno.getText());
-        double termoIndependenteAux = Double.parseDouble(this.termoIndependenteSeno.getText());
+        try{
+            double multiplicadorMAux = Double.parseDouble(this.multiplicadorMSeno.getText());
+            double termoIndependenteAux = Double.parseDouble(this.termoIndependenteSeno.getText());
 
-        Display display = new Display();
-        display.setSeno(multiplicadorMAux, termoIndependenteAux);
-        display.showDisplay("Função seno");
+            Display display = new Display();
+            display.setSeno(multiplicadorMAux, termoIndependenteAux);
+            display.showDisplay("Função seno");
+        } catch( NumberFormatException e){
+            this.erroAba3.setVisible(true);
+        }
     }//GEN-LAST:event_submitFuncaoSenoActionPerformed
 
     private void termoIndependenteSenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_termoIndependenteSenoActionPerformed
@@ -535,12 +599,16 @@ public class OperacoesJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_multiplicadorMCossenoActionPerformed
 
     private void submitFuncaoCossenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitFuncaoCossenoActionPerformed
-        double multiplicadorMAux = Double.parseDouble(this.multiplicadorMCosseno.getText());
-        double termoIndependenteAux = Double.parseDouble(this.termoIndependenteCosseno.getText());
+        try{
+            double multiplicadorMAux = Double.parseDouble(this.multiplicadorMCosseno.getText());
+            double termoIndependenteAux = Double.parseDouble(this.termoIndependenteCosseno.getText());
 
-        Display display = new Display();
-        display.setCosseno(multiplicadorMAux, termoIndependenteAux);
-        display.showDisplay("Função cosseno");
+            Display display = new Display();
+            display.setCosseno(multiplicadorMAux, termoIndependenteAux);
+            display.showDisplay("Função cosseno");
+        } catch( NumberFormatException e){
+            this.erroAba4.setVisible(true);
+        }
     }//GEN-LAST:event_submitFuncaoCossenoActionPerformed
 
     private void termoIndependenteCossenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_termoIndependenteCossenoActionPerformed
@@ -593,6 +661,10 @@ public class OperacoesJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel eq1GraujPanel2;
     private javax.swing.JPanel eq1GraujPanel3;
     private javax.swing.JPanel eq1GraujPanel4;
+    private javax.swing.JLabel erroAba1;
+    private javax.swing.JLabel erroAba2;
+    private javax.swing.JLabel erroAba3;
+    private javax.swing.JLabel erroAba4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
